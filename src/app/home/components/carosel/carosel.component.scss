@@ -4,6 +4,7 @@
   width: $width;
   height: 87vh;
   align-items: center;
+  padding-top: 30px;
 }
 
 .green-box {
@@ -16,7 +17,7 @@
   border: transparent 1px solid;
   border-radius: 10px;
   min-height: 50px;
-  min-width: 180px;
+  min-width: 250px;
 
   .title {
     font-size: x-large;
@@ -45,8 +46,7 @@
 
   .middle-container {
     @include sub-container(50%);
-    position: relative;
-    top: 10%;
+   
 
     .number-container{
         width: 20%;

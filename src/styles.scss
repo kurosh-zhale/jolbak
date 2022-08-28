@@ -7,15 +7,20 @@
 @import "swiper/scss/navigation";
 @import "swiper/scss/pagination";
 
+@font-face {
+  font-family: "yekan";
+  src: url("assets/fonts/IRYekanBold.woff.ttf");
+}
+
 .full-screen {
   width: 100vw;
 }
 html,
 body {
-    margin: 0px;
-    overflow-x: hidden;
+  margin: 0px;
+  overflow-x: hidden;
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    font-family: 'yekan';
 }

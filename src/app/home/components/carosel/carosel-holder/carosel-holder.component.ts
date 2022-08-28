@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 import { SWIPER_CONFIG } from '../../../shared/configs';
-import SwiperCore, { Virtual } from 'swiper';
+import SwiperCore, { Navigation } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
-SwiperCore.use([Virtual]);
+SwiperCore.use([Navigation]);
 
 @Component({
   selector: 'app-carosel-holder',
@@ -21,10 +21,10 @@ export class CaroselHolderComponent implements OnInit {
   ngOnInit(): void {}
 
   slideNext(): void {
-    this.swiper?.swiperRef.slideNext(200);
+    this.swiper?.swiperRef.slideNext(500);
   }
 
   slidePerv(): void {
-    this.swiper?.swiperRef.slidePrev(200);
+    this.swiper?.swiperRef.slidePrev(500);
   }
 }
