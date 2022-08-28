@@ -1,0 +1,19 @@
+.swiper-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .swiper-slide{
+
+        img{
+            width: 90%;
+        }
+    }
+
+    .nav-btn{
+        width: 70px;
+        height: 70px;
+        position: relative;
+    }
+}
