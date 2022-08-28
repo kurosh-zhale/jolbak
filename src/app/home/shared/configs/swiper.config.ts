@@ -2,10 +2,10 @@ import { SwiperOptions } from 'swiper/types/swiper-options';
 
 export const SWIPER_CONFIG: SwiperOptions = {
   slidesPerView: 1,
-  navigation: false,
-  virtual:true,
+  navigation: true,
+  spaceBetween:30,
   allowTouchMove: true,
-  autoplay: true,
-  direction: 'horizontal',
   slideToClickedSlide: true,
+  centeredSlides:true,
+  centerInsufficientSlides:true
 };
