@@ -8,9 +8,10 @@ import { HomeComponent } from './home.component';
 import { CaroselComponent } from './components/carosel/carosel.component';
 import { CaroselHolderComponent } from './components/carosel/carosel-holder/carosel-holder.component';
 import { CompaniesComponent } from './components/companies/companies.component';
+import { PublishmentsComponent } from './components/publishments/publishments.component';
 
 @NgModule({
-  declarations: [HomeComponent, CaroselComponent, CaroselHolderComponent, CompaniesComponent],
+  declarations: [HomeComponent, CaroselComponent, CaroselHolderComponent, CompaniesComponent, PublishmentsComponent],
   imports: [CommonModule, HomeRoutingModule, SwiperModule],
 })
 export class HomeModule {}
