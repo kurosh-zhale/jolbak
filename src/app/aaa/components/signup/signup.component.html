@@ -1,0 +1,40 @@
+<div class="flex w-full h-full justify-center items-center">
+  <mat-card class="w-[400px] h-full my-10 p-10 font-[yekan]" dir="rtl">
+    <div class="flex justify-center">
+      <p class="font-bold text-lg">ثبت نام</p>
+    </div>
+    <hr />
+    <form class="flex flex-col" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field *ngIf="isSignup">
+        <mat-label> ایمیل </mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
+          لطفا ایمیل خود را وارد کنید
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field *ngIf="isSignup">
+        <mat-label> گذرواژه </mat-label>
+        <input matInput formControlName="password" />
+        <mat-error *ngIf="signupForm.get('confirmPassword')?.hasError('required')">
+          لطفا گذرواژه خود را وارد کنید
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field *ngIf="isSignup">
+        <mat-label>تکرار گذرواژه</mat-label>
+        <input matInput formControlName="confirmPassword" />
+        <mat-error
+          *ngIf="signupForm.get('confirmPassword')?.hasError('required')"
+        >
+          لطفا گذرواژه خود را تکرار کنید
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field *ngIf="!isSignup">
+        <mat-label>کد تایید</mat-label>
+        <input matInput formControlName="code">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <button class="submit-btn" type="submit">{{isSignup? 'ثبت نام':'تایید'}}</button>
+      <a class="route-link" [routerLink]="['../login']">ورود</a>
+    </form>
+  </mat-card>
+</div>

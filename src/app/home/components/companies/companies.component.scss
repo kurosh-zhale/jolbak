@@ -27,12 +27,12 @@
 
     .light-blue {
       @include company();
-      background-color: #2023fe;
+      background-color: var(--light-blue);
     }
 
     .dark-blue {
       @include company();
-      background-color: #0906b5;
+      background-color: var(--blue);
     }
   }
 }

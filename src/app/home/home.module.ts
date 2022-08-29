@@ -12,7 +12,14 @@ import { PublishmentsComponent } from './components/publishments/publishments.co
 import { LinksComponent } from './components/links/links.component';
 
 @NgModule({
-  declarations: [HomeComponent, CaroselComponent, CaroselHolderComponent, CompaniesComponent, PublishmentsComponent, LinksComponent],
+  declarations: [
+    HomeComponent,
+    CaroselComponent,
+    CaroselHolderComponent,
+    CompaniesComponent,
+    PublishmentsComponent,
+    LinksComponent,
+  ],
   imports: [CommonModule, HomeRoutingModule, SwiperModule],
 })
 export class HomeModule {}
