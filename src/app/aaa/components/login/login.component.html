@@ -9,18 +9,22 @@
         <mat-label>ایمیل</mat-label>
         <input matInput formControlName="email" />
         <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
-          لطفا ایمیل خور را وارد کنید
+          لطفا ایمیل خود را وارد کنید
         </mat-error>
       </mat-form-field>
       <mat-form-field>
         <mat-label> گذرواژه </mat-label>
         <input matInput formControlName="password" />
         <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-          لطفا گذرواژه خور را وارد کنید
+          لطفا گذرواژه خود را وارد کنید
         </mat-error>
       </mat-form-field>
-      <button class="submit-btn">ورود</button>
-      <span class="route-link" role="button" [routerLink]="['signup']">ثبت نام</span>
+      <button class="submit-btn" type="submit">ورود</button>
+      <button class="submit-btn" type="button">ورود به عنوان شرکت</button>
+      <hr />
+      <a class="route-link" role="button" [routerLink]="['../signup']">
+        ثبت نام
+      </a>
     </form>
   </mat-card>
 </div>
