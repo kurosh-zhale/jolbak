@@ -1,0 +1,99 @@
+@mixin sub-container($width) {
+  display: flex;
+  flex-direction: column;
+  width: $width;
+  height: 87vh;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.green-box {
+  background-color: #378a06;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border: transparent 1px solid;
+  border-radius: 10px;
+  min-height: 50px;
+  min-width: 250px;
+
+  .title {
+    font-size: x-large;
+    font-weight: 700;
+  }
+}
+
+.light-green-box {
+  background-color: #d7e8cd;
+  border-radius: 10px;
+  border: transparent 1px solid;
+  align-self: center;
+}
+
+.carosel-container {
+  display: flex;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  .side-container {
+    @include sub-container(25%);
+  }
+
+  .middle-container {
+    @include sub-container(50%);
+   
+
+    .number-container{
+        width: 20%;
+        height: 230px;
+        border: #378a06 10px solid;
+        border-radius: 15px;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .desc{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 50%;
+            background-color: #378a06;
+            border: transparent 1px solid;
+            border-radius: 15px;
+            position: relative;
+            top: 42px;
+            color: #fff;
+            align-items: center;
+        }
+
+        .circle{
+            border: #fff solid 5px ;
+            border-radius: 100%;
+            width: 40%;
+            height: 60px;
+            background-color: #378a06;
+            position: relative;
+            bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    .shadow-box{
+        width: 90%;
+        height: 250px;
+        position: relative;
+        bottom: 200px;
+        z-index: -1;
+    }
+  }
+}

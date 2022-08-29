@@ -3,8 +3,24 @@
 @tailwind components;
 @tailwind utilities;
 
-.full-screen{
-    width: 100vw;
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
+
+@font-face {
+  font-family: "yekan";
+  src: url("assets/fonts/IRYekanBold.woff.ttf");
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.full-screen {
+  width: 100vw;
+}
+html,
+body {
+  margin: 0px;
+  overflow-x: hidden;
+}
+body {
+    margin: 0;
+    font-family: 'yekan';
+}
