@@ -8,7 +8,7 @@
 }
 
 .green-box {
-  background-color: #378a06;
+  background-color: var(--green);
   color: white;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@
 }
 
 .light-green-box {
-  background-color: #d7e8cd;
+  background-color: var(--light-green);
   border-radius: 10px;
   border: transparent 1px solid;
   align-self: center;

@@ -1,1 +1,26 @@
-<p>login works!</p>
+<div class="flex w-full h-full justify-center items-center">
+  <mat-card class="w-[400px] h-full my-10 p-10 font-[yekan]" dir="rtl">
+    <div class="flex justify-center">
+      <p class="font-bold text-lg">ورود</p>
+    </div>
+    <hr />
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm" class="flex flex-col">
+      <mat-form-field>
+        <mat-label>ایمیل</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+          لطفا ایمیل خور را وارد کنید
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label> گذرواژه </mat-label>
+        <input matInput formControlName="password" />
+        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+          لطفا گذرواژه خور را وارد کنید
+        </mat-error>
+      </mat-form-field>
+      <button class="submit-btn">ورود</button>
+      <span class="route-link" role="button" [routerLink]="['signup']">ثبت نام</span>
+    </form>
+  </mat-card>
+</div>

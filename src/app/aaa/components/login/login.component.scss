@@ -1,0 +1,39 @@
+.submit-btn {
+  text-align: center;
+  background-color: var(--green);
+  color: #fff;
+  border: solid transparent 1px;
+  border-radius: 10px;
+  height: 40px;
+  transition: all ease 200ms;
+}
+
+.submit-btn:hover {
+  background-color: #f4933f;
+  transform: translate(0px, -5px);
+}
+
+hr {
+  margin-bottom: 15px;
+}
+
+mat-form-field {
+  margin-bottom: 15px;
+}
+
+.route-link {
+  color: var(--green);
+  font-weight: 300;
+  font-size: large;
+  text-align: center;
+  text-decoration: underline;
+  transition: all ease 200ms;
+  max-width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.route-link:hover {
+  color: #f4933f;
+}

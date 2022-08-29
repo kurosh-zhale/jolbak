@@ -7,6 +7,8 @@
 @import "swiper/scss/navigation";
 @import "swiper/scss/pagination";
 
+@import "assets/styles/colors/colors.scss";
+
 @font-face {
   font-family: "yekan";
   src: url("assets/fonts/IRYekanBold.woff.ttf");
@@ -21,6 +23,6 @@ body {
   overflow-x: hidden;
 }
 body {
-    margin: 0;
-    font-family: 'yekan';
+  margin: 0;
+  font-family: "yekan";
 }
