@@ -4,22 +4,22 @@
       <p class="font-bold text-lg">ثبت نام</p>
     </div>
     <hr />
-    <form class="flex flex-col" [formGroup]="signupForm">
-      <mat-form-field>
+    <form class="flex flex-col" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field *ngIf="isSignup">
         <mat-label> ایمیل </mat-label>
         <input matInput formControlName="email" />
         <mat-error *ngIf="signupForm.get('email')?.hasError('required')">
           لطفا ایمیل خود را وارد کنید
         </mat-error>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field *ngIf="isSignup">
         <mat-label> گذرواژه </mat-label>
         <input matInput formControlName="password" />
         <mat-error *ngIf="signupForm.get('confirmPassword')?.hasError('required')">
           لطفا گذرواژه خود را وارد کنید
         </mat-error>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field *ngIf="isSignup">
         <mat-label>تکرار گذرواژه</mat-label>
         <input matInput formControlName="confirmPassword" />
         <mat-error
@@ -28,7 +28,12 @@
           لطفا گذرواژه خود را تکرار کنید
         </mat-error>
       </mat-form-field>
-      <button class="submit-btn">ثبت نام</button>
+      <mat-form-field *ngIf="!isSignup">
+        <mat-label>کد تایید</mat-label>
+        <input matInput formControlName="code">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <button class="submit-btn" type="submit">{{isSignup? 'ثبت نام':'تایید'}}</button>
       <a class="route-link" [routerLink]="['../login']">ورود</a>
     </form>
   </mat-card>

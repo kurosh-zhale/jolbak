@@ -11,9 +11,27 @@ export class SignupComponent implements OnInit {
     email: ['', [Validators.required]],
     password: ['', [Validators.required]],
     confirmPassword: ['', [Validators.required]],
+    code: ['', [Validators.required]],
   });
+
+  isSignup = true;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {}
+
+  onSubmit(): void {
+    let model;
+    if (this.isSignup) {
+      model = {
+        email: this.signupForm.get('email')?.value,
+        password: this.signupForm.get('password')?.value,
+      };
+      this.isSignup = false;
+    } else {
+      model = {
+        code: this.signupForm.get('code')?.value,
+      };
+    }
+  }
 }
