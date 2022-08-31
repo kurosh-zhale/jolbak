@@ -4,20 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    MatSidenavModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

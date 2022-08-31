@@ -1,7 +1,11 @@
-<ng-container *ngIf="isMainPage">
+<ng-container *ngIf="isMainPage && !isMobile">
   <div class="full-screen flex flex-col h-36 px-7 py-3">
     <div class="flex flex-row-reverse justify-between h-2/3">
-      <div class="flex justify-between w-52" role="button" (click)="navigateTo('')">
+      <div
+        class="flex justify-between w-52"
+        role="button"
+        (click)="navigateTo('')"
+      >
         <p class="self-center text-2xl font-bold line">نام شرکت</p>
         <img src="../../../assets/logo.png" alt="" />
       </div>
@@ -34,4 +38,51 @@
     </div>
   </div>
   <div class="bg-green-900 w-full h-[5px] mt-7"></div>
+</ng-container>
+
+<ng-container *ngIf="isMobile">
+  <div class="w-full h-28">
+    <div role="button" class="flex h-1/2 w-full" (click)="navigateTo('')">
+      <img
+        src="assets/login-menu.png"
+        alt=""
+        class="mr-auto ml-3 my-4"
+        [matMenuTriggerFor]="menu"
+      />
+      <mat-menu #menu>
+        <button mat-menu-item class="text-xl" (click)="navigateTo('aaa')">
+          ورود
+        </button>
+        <button
+          mat-menu-item
+          class="text-xl"
+          (click)="navigateTo('aaa/signup')"
+        >
+          ثبت نام
+        </button>
+      </mat-menu>
+      <div class="flex justify-end ml-auto py-4">
+        <p class="self-center font-bold mr-3">نام شرکت</p>
+        <img src="assets/logo.png" alt="" class="mr-3" />
+      </div>
+    </div>
+    <hr />
+    <div class="w-full h-1/2 flex p-4">
+      <img
+        src="assets/search icon.png"
+        alt=""
+        class="mr-auto h-5"
+        role="button"
+        (click)="openSearch()"
+      />
+      <img
+        src="assets/menu.png"
+        alt=""
+        class="ml-auto h-5"
+        role="button"
+        (click)="menuEvent()"
+      />
+    </div>
+  </div>
+  <div class="bg-green-900 w-full h-[1px]"></div>
 </ng-container>
