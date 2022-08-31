@@ -1,7 +1,7 @@
 <ng-container *ngIf="isMainPage">
   <div class="full-screen flex flex-col h-36 px-7 py-3">
     <div class="flex flex-row-reverse justify-between h-2/3">
-      <div class="flex justify-between w-52">
+      <div class="flex justify-between w-52" role="button" (click)="navigateTo('')">
         <p class="self-center text-2xl font-bold line">نام شرکت</p>
         <img src="../../../assets/logo.png" alt="" />
       </div>
@@ -27,7 +27,9 @@
           alt=""
           class="h-2/3 ml-2 self-center"
         />
-        <p class="self-center" (click)="navigateToLogin()" role="button">ورود/ثبت نام</p>
+        <p class="self-center" (click)="navigateTo('aaa')" role="button">
+          ورود/ثبت نام
+        </p>
       </div>
     </div>
   </div>
