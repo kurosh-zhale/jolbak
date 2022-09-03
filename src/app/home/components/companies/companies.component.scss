@@ -1,5 +1,5 @@
-@mixin company {
-  width: 20%;
+@mixin company($width) {
+  width: $width;
   color: #fff;
   font-size: 2rem;
   font-weight: 800;
@@ -26,13 +26,39 @@
     margin-bottom: 30px;
 
     .light-blue {
-      @include company();
+      @include company(20%);
       background-color: var(--light-blue);
     }
 
     .dark-blue {
-      @include company();
+      @include company(20%);
       background-color: var(--blue);
+    }
+  }
+}
+
+@media (min-device-width: 300px) and (max-device-width: 450px) {
+  .companies-container {
+    .company-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 8px;
+      .light-blue {
+        width: 100%;
+        min-height: 80px;
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+      .dark-blue {
+        width: 100%;
+        min-height: 80px;
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+    .company-list > div {
+      color: red;
     }
   }
 }
