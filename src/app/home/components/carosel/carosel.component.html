@@ -1,5 +1,142 @@
-<div class="carosel-container">
-  <div class="side-container">
+<ng-container *ngIf="!isMobile">
+  <div class="carosel-container">
+    <div class="side-container">
+      <div class="green-box items-center pt-5">
+        <span class="title mb-5">تازه ها</span>
+        <span role="button" class="mb-10">تازه های کشاورزی</span>
+        <span role="button" class="mb-10">تازه های کشاورزی</span>
+        <span role="button" class="mb-10">تازه های کشاورزی</span>
+      </div>
+      <div class="green-box items-center">
+        <span role="button">راهنمای سایت</span>
+      </div>
+      <div class="green-box items-center">
+        <span role="button">مراحل اخذ مجوز</span>
+      </div>
+    </div>
+    <div class="middle-container">
+      <app-carosel-holder class="self-center mb-4 w-full"></app-carosel-holder>
+      <div class="light-green-box w-48 h-16 flex flex-col justify-center">
+        <div class="flex justify-center align-middle">
+          <span class="text-lg mb-2">آمار های شرکت</span>
+        </div>
+        <img
+          src="assets/Recta5ngle 14 copy 2.png"
+          alt=""
+          class="w-24 self-center"
+        />
+      </div>
+      <div class="flex w-full justify-between mt-5">
+        <div class="number-container text-center">
+          <span class="font-bold text-4xl">46</span>
+          <div class="desc">
+            <div class="circle">
+              <img src="assets/corporate.png" alt=""/>
+            </div>
+            <span class="relative bottom-4 text-xs">تعداد همه شرکت ها</span>
+          </div>
+        </div>
+        <div class="number-container text-center">
+          <span class="font-bold text-4xl">10</span>
+          <div class="desc">
+            <div class="circle">
+              <img src="assets/target.png" alt="" />
+            </div>
+            <span class="relative bottom-4 text-xs">تعداد شرکت های مصرف کننده</span>
+          </div>
+        </div>
+        <div class="number-container text-center">
+          <span class="font-bold text-4xl">12</span>
+          <div class="desc">
+            <div class="circle">
+              <img src="../../../../assets/import.png" alt="" />
+            </div>
+            <span class="relative bottom-4 text-xs">تعداد شرکت های وارد کننده</span>
+          </div>
+        </div>
+        <div class="number-container text-center">
+          <span class="font-bold text-4xl">8</span>
+          <div class="desc">
+            <div class="circle">
+              <img src="../../../../assets/manufacture.png" alt="" />
+            </div>
+            <span class="relative bottom-4 text-xs">تعداد شرکت های تولید کننده</span>
+          </div>
+        </div>
+      </div>
+      <div class="light-green-box shadow-box"></div>
+    </div>
+
+    <div class="side-container">
+      <div class="green-box items-end pr-4">
+        <span class="title mb-5 pt-5"> آموزش و ترویج </span>
+        <span role="button" class="mb-10"> مقالات </span>
+        <span role="button" class="mb-10"> کتب و رسانه </span>
+        <span role="button" class="mb-10"> کارگاه های آموزشی </span>
+        <span role="button" class="mb-10"> فناوری های نوین </span>
+        <span role="button" class="mb-10"> رویداد و همایش </span>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isMobile">
+  <div class="carosel-container">
+    <app-carosel-holder class="self-center mb-4 w-full"></app-carosel-holder>
+    <div class="light-green-box w-40 h-12 flex flex-col justify-center mb-7">
+      <div class="flex justify-center align-middle">
+        <span class="text-md mb-2">آمار های شرکت</span>
+      </div>
+      <img
+        src="assets/Recta5ngle 14 copy 2.png"
+        alt=""
+        class="w-24 self-center"
+      />
+    </div>
+    <div class="number-container text-center mb-7">
+      <span class="font-bold text-4xl">46</span>
+      <div class="desc">
+        <div class="circle">
+          <img src="assets/corporate.png" alt="" />
+        </div>
+        <span class="relative bottom-4">تعداد همه شرکت ها</span>
+      </div>
+    </div>
+    <div class="number-container text-center mb-7">
+      <span class="font-bold text-4xl">10</span>
+      <div class="desc">
+        <div class="circle">
+          <img src="assets/target.png" alt="" />
+        </div>
+        <span class="relative bottom-4">تعداد شرکت های مصرف کننده</span>
+      </div>
+    </div>
+    <div class="number-container text-center mb-7">
+      <span class="font-bold text-4xl">12</span>
+      <div class="desc">
+        <div class="circle">
+          <img src="../../../../assets/import.png" alt="" />
+        </div>
+        <span class="relative bottom-4">تعداد شرکت های وارد کننده</span>
+      </div>
+    </div>
+    <div class="number-container text-center mb-7">
+      <span class="font-bold text-4xl">8</span>
+      <div class="desc">
+        <div class="circle">
+          <img src="../../../../assets/manufacture.png" alt="" />
+        </div>
+        <span class="relative bottom-4">تعداد شرکت های تولید کننده</span>
+      </div>
+    </div>
+    <div class="green-box items-end pr-4 mb-7">
+      <span class="title mb-5 pt-5"> آموزش و ترویج </span>
+      <span role="button" class="mb-10"> مقالات </span>
+      <span role="button" class="mb-10"> کتب و رسانه </span>
+      <span role="button" class="mb-10"> کارگاه های آموزشی </span>
+      <span role="button" class="mb-10"> فناوری های نوین </span>
+      <span role="button" class="mb-10"> رویداد و همایش </span>
+    </div>
     <div class="green-box items-center pt-5">
       <span class="title mb-5">تازه ها</span>
       <span role="button" class="mb-10">تازه های کشاورزی</span>
@@ -13,69 +150,4 @@
       <span role="button">مراحل اخذ مجوز</span>
     </div>
   </div>
-  <div class="middle-container">
-    <app-carosel-holder class="self-center mb-4 w-full"></app-carosel-holder>
-    <div class="light-green-box w-48 h-16 flex flex-col justify-center">
-      <div class="flex justify-center align-middle">
-        <span class="text-lg mb-2">آمار های شرکت</span>
-      </div>
-      <img
-        src="assets/Rectangle 14 copy 2.png"
-        alt=""
-        class="w-24 self-center"
-      />
-    </div>
-    <div class="w-full">
-      <div class="flex w-full justify-between mt-5">
-        <div class="number-container text-center">
-          <span class="font-bold text-4xl">46</span>
-          <div class="desc">
-            <div class="circle">
-              <img src="assets/corporate.png" alt="" />
-            </div>
-            <span class="relative bottom-4">تعداد همه شرکت ها</span>
-          </div>
-        </div>
-        <div class="number-container text-center">
-          <span class="font-bold text-4xl">10</span>
-          <div class="desc">
-            <div class="circle">
-              <img src="assets/target.png" alt="" />
-            </div>
-            <span class="relative bottom-4">تعداد شرکت های مصرف کننده</span>
-          </div>
-        </div>
-        <div class="number-container text-center">
-          <span class="font-bold text-4xl">12</span>
-          <div class="desc">
-            <div class="circle">
-              <img src="../../../../assets/import.png" alt="" />
-            </div>
-            <span class="relative bottom-4">تعداد شرکت های وارد کننده</span>
-          </div>
-        </div>
-        <div class="number-container text-center">
-          <span class="font-bold text-4xl">8</span>
-          <div class="desc">
-            <div class="circle">
-              <img src="../../../../assets/manufacture.png" alt="" />
-            </div>
-            <span class="relative bottom-4">تعداد شرکت های تولید کننده</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="light-green-box shadow-box"></div>
-</div>
-
-  <div class="side-container">
-    <div class="green-box items-end pr-4">
-      <span class="title mb-5 pt-5"> آموزش و ترویج </span>
-      <span role="button" class="mb-10"> مقالات </span>
-      <span role="button" class="mb-10"> کتب و رسانه </span>
-      <span role="button" class="mb-10"> کارگاه های آموزشی </span>
-      <span role="button" class="mb-10"> فناوری های نوین </span>
-      <span role="button" class="mb-10"> رویداد و همایش </span>
-    </div>
-  </div>
-</div>
+</ng-container>
